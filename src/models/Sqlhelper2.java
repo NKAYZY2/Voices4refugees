@@ -329,5 +329,50 @@ public class Sqlhelper2 {
 		return status_of_change;
 
 	}
+	
+	
+	public static String getTimesubmission() throws SQLException {
+//method that gets the time already recorded in the database at which different letters were submitted.
+		
+		try {
+			Sqlhelper2.getConnection();
+			System.out.println("connection has been gotten");
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+		
+		java.sql.Statement st = con1.createStatement();
+		ResultSet rs3 = st.executeQuery("select time from Letters");
+		
+		
+			
+			while(rs3.next()){
+				
+				//get the data from the columns perhaps into two variables - one a time object variable 
+				//a string OR we might need to create another class to be able to hold both a time and 
+				//string as one object to be passed into an Arraylist.
+				
+				// get code that will add objects(time/case) into the Arraylist
+				
+				
+				
+			}
+			return connection;
+
+//			System.out.println(time.toString());
+//			
+//			ps.setString(1, time.toString());
+//
+//			ps.setString(2, email);
+//
+//			ps.setString(3, lettertype);
+//
+//			ps.executeUpdate();
+//
+//		}
+//		con1.close();
+		
+	} 
 
 }
